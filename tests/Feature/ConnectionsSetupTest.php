@@ -16,7 +16,7 @@ class ConnectionsSetupTest extends TestCase
 
     public function tearDown(): void
     {
-        $dbFile = getcwd() . '/tests/_files/test.db';
+        $dbFile = getcwd().'/tests/_files/test.db';
         if (File::exists($dbFile)) {
             File::delete($dbFile);
         }
@@ -62,7 +62,7 @@ class ConnectionsSetupTest extends TestCase
     public function testConnectionLocalFile(): void
     {
 
-        $dbFile = getcwd() . '/tests/_files/test.db';
+        $dbFile = getcwd().'/tests/_files/test.db';
         config()->set('database.default', 'sqlite');
         config()->set('database.connections.libsql', [
             'driver' => 'libsql',

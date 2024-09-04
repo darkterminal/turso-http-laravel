@@ -20,6 +20,7 @@ class LibSQLQueryProcessor extends SQLiteProcessor
     public function processSelect(Builder $query, $results)
     {
         $results = $this->useAssoc($results);
+
         return $results;
     }
 
@@ -34,11 +35,13 @@ class LibSQLQueryProcessor extends SQLiteProcessor
             $arr_vals = [];
             $i = 0;
             foreach ($vals as $val) {
-                if ($val['type'] === "null")
+                if ($val['type'] === 'null') {
                     $val['value'] = null;
+                }
                 $arr_vals[] = $val['value'];
                 $i++;
             }
+
             return $arr_vals;
         }, $results['rows']);
 

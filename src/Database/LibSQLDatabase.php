@@ -106,7 +106,7 @@ class LibSQLDatabase
 
     public function sync(): void
     {
-        throw new \Exception("[LibSQL: remote] Sync is only available for Remote Replica Connection in Native libSQL Extension.", 1);
+        throw new \Exception('[LibSQL: remote] Sync is only available for Remote Replica Connection in Native libSQL Extension.', 1);
     }
 
     public function getDb(): LibSQL
@@ -134,7 +134,7 @@ class LibSQLDatabase
             return 'NULL';
         }
 
-        return "'" . $this->escapeString($input) . "'";
+        return "'".$this->escapeString($input)."'";
     }
 
     public function __destruct()

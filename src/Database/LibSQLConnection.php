@@ -2,10 +2,10 @@
 
 namespace Turso\Http\Laravel\Database;
 
+use Darkterminal\TursoHttp\LibSQL;
 use Exception;
 use Illuminate\Database\Connection;
 use Illuminate\Filesystem\Filesystem;
-use Darkterminal\TursoHttp\LibSQL;
 
 class LibSQLConnection extends Connection
 {
@@ -47,7 +47,7 @@ class LibSQLConnection extends Connection
     {
         $res = $this->select($query, $bindings);
 
-        return !empty($res);
+        return ! empty($res);
     }
 
     public function getPdo(): LibSQLDatabase
@@ -110,7 +110,7 @@ class LibSQLConnection extends Connection
 
             $results = $statement->query($bindings);
 
-            return array_map(fn($result) => $result, $results);
+            return array_map(fn ($result) => $result, $results);
         });
     }
 
@@ -135,7 +135,7 @@ class LibSQLConnection extends Connection
 
         $preparedQuery = $this->getRawPdo()->prepare($query);
 
-        if (!$preparedQuery) {
+        if (! $preparedQuery) {
             throw new Exception('Failed to prepare statement.');
         }
 
@@ -319,6 +319,6 @@ class LibSQLConnection extends Connection
             return 'NULL';
         }
 
-        return "'" . $this->escapeString($input) . "'";
+        return "'".$this->escapeString($input)."'";
     }
 }

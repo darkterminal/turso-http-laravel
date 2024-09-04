@@ -4,6 +4,4 @@ namespace Turso\Http\Laravel\Exceptions;
 
 use LogicException;
 
-class FeatureNotSupportedException extends LogicException
-{
-}
+class FeatureNotSupportedException extends LogicException {}
