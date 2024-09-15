@@ -1,5 +1,5 @@
 {
-    "name": "tursodatabase/turso-http-laravel",
+    "name": "darkterminal/turso-http-laravel",
     "description": "A Turso HTTP SDK for Laravel",
     "version": "1.0.1",
     "keywords": [

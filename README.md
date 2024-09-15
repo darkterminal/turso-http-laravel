@@ -42,7 +42,7 @@
 You can install the package via composer:
 
 ```bash
-composer require tursodatabase/turso-http-laravel
+composer require darkterminal/turso-http-laravel
 ```
 
 Then register the service provider at `bootstrap/providers.php` array:
